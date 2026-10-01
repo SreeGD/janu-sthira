@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Jaanu Setu backup",
+  "type": "object",
+  "required": ["app", "version", "exportedAt", "settings", "days"],
+  "properties": {
+    "app": { "const": "jaanu-setu" },
+    "version": { "type": "integer", "minimum": 1 },
+    "exportedAt": { "type": "string", "format": "date-time" },
+    "settings": { "type": "object" },
+    "weeks": { "type": "object", "propertyNames": { "pattern": "^\\d{4}-\\d{2}-\\d{2}$" } },
+    "days": {
+      "type": "object",
+      "propertyNames": { "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+      "additionalProperties": { "type": "object", "required": ["date", "ticked", "counters", "log"] }
+    }
+  }
+}
