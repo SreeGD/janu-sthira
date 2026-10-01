@@ -21,6 +21,7 @@ export default function Cards() {
   return (
     <Page title="Exercise cards">
       <input type="text" placeholder="Search by code or name (e.g. M5, bridge)" aria-label="Search cards" value={q} onChange={(e) => setQ(e.target.value)} />
+      <Link to="/knee" className="btn w-full">Knee guide: ACL, PCL, menisci and prevention</Link>
       <Link to="/donts" className="btn w-full">Don'ts: what makes it worse</Link>
       <Link to="/bend" className="btn w-full">Getting the bend back: guide and cross-legged sitting</Link>
       <div className="flex flex-wrap gap-2" role="group" aria-label="Filter by session">

@@ -6,6 +6,7 @@ import Bend from './pages/Bend'
 import Cards, { CardDetail } from './pages/Cards'
 import Donts from './pages/Donts'
 import Food from './pages/Food'
+import Knee from './pages/Knee'
 import More from './pages/More'
 import { Checkpoints, Living, Mri } from './pages/Mri'
 import Progress from './pages/Progress'
@@ -45,6 +46,7 @@ function Shell() {
       <Routes>
         <Route path="/" element={<Today />} />
         <Route path="/cards" element={<Cards />} />
+        <Route path="/knee" element={<Knee />} />
         <Route path="/donts" element={<Donts />} />
         <Route path="/bend" element={<Bend />} />
         <Route path="/cards/:code" element={<CardDetail />} />
