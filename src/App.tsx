@@ -34,9 +34,12 @@ function Shell() {
     <>
       <header className="sticky top-0 z-20 border-b" style={{ background: 'var(--surface)', borderColor: 'var(--border)', paddingTop: 'env(safe-area-inset-top)' }}>
         <div className="mx-auto flex max-w-2xl items-center justify-between px-4 py-2">
-          <NavLink to="/" className="flex items-center gap-2 font-bold" style={{ color: 'var(--navy)' }} aria-label="Jānu Sthira, home">
-            <img src="./icons/icon.svg" alt="" width={28} height={28} className="rounded-md" />
-            Jānu Sthira
+          <NavLink to="/" className="flex items-center gap-2 font-bold" style={{ color: 'var(--navy)' }} aria-label="Jānu Sthira, steady knee, confident steps, home">
+            <img src="./icons/icon.svg" alt="" width={32} height={32} className="rounded-md" />
+            <span className="flex flex-col leading-tight">
+              <span>Jānu Sthira</span>
+              <span className="text-xs font-normal" style={{ color: 'var(--muted)' }}>Steady knee, confident steps</span>
+            </span>
           </NavLink>
           <NavLink to="/safety" className="flex items-center rounded-full px-4 text-sm font-bold text-white" style={{ background: 'var(--bad-solid)' }} aria-label="Safety: when to get help">
             Safety

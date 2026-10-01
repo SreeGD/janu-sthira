@@ -1,5 +1,7 @@
 # Jānu Sthira
 
+*Steady knee, confident steps*
+
 **Jānu Sthira** (Sanskrit *jānu*, knee + *sthira*, steady) is a free, offline-first web app for following a structured, rehab-first recovery plan after an ACL injury. It turns a rehab booklet into a daily habit tracker: a schedule of exercise sessions, an illustrated card for every exercise, a morning knee check that adapts the day and the walking target, a weekly tick sheet, daily and weekly reviews, and guides for the MRI, safety warnings, getting the knee bend back, things to avoid, a vegetarian food plan with a weekly shopping list, and supplements. It works on your phone, stores everything on your device, and needs no account.
 
 **Not medical advice.** The exercise, MRI, supplement and food content is general educational material based on a rehab booklet. Agree any plan with your surgeon and physiotherapist.

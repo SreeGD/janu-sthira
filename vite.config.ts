@@ -16,7 +16,7 @@ export default defineConfig({
       manifest: {
         name: 'Jānu Sthira',
         short_name: 'Jānu Sthira',
-        description: 'A steady path back to a confident knee: ACL rehab tracker',
+        description: 'Steady knee, confident steps. ACL rehab tracker',
         theme_color: '#1f3a5f',
         background_color: '#f6f8fa',
         display: 'standalone',
