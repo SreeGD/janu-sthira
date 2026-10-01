@@ -44,12 +44,14 @@ describe('backup', () => {
   })
   it('rejects bad files', () => {
     expect(() => validateBackup(null)).toThrow()
-    expect(() => validateBackup({ app: 'other' })).toThrow(/not a Jānu Setu/)
-    expect(() => validateBackup({ app: 'janu-setu', version: 1, exportedAt: 'x', settings: {}, days: { bad: {} } })).toThrow(/date key/)
+    expect(() => validateBackup({ app: 'other' })).toThrow(/not a Jānu Sthira/)
+    expect(() => validateBackup({ app: 'janu-sthira', version: 1, exportedAt: 'x', settings: {}, days: { bad: {} } })).toThrow(/date key/)
   })
   it('still accepts backups made before the rename', () => {
-    const legacy = { app: 'jaanu-setu', version: 1, exportedAt: '2026-10-01T00:00:00Z', settings: {}, days: {} }
-    expect(() => validateBackup(legacy)).not.toThrow()
+    for (const app of ['janu-setu', 'jaanu-setu']) {
+      const legacy = { app, version: 1, exportedAt: '2026-10-01T00:00:00Z', settings: {}, days: {} }
+      expect(() => validateBackup(legacy)).not.toThrow()
+    }
   })
   it('rejects invalid JSON', async () => {
     await expect(importBackup('{nope')).rejects.toThrow(/valid JSON/)
@@ -62,7 +64,7 @@ import type { DayEntry } from '../../src/content/types'
 
 const day = (date: string, updatedAt: string, ticked: string[] = []): DayEntry => ({ ...emptyDay(date), ticked, updatedAt })
 const local = (days: DayEntry[], over = {}): LocalData => ({ settings: { ...defaultSettings(), ...over }, days: Object.fromEntries(days.map((d) => [d.date, d])), weeks: {} })
-const file = (days: DayEntry[], over = {}, weeks = {}): BackupFile => ({ app: 'janu-setu', version: 1, exportedAt: '2026-10-20T00:00:00Z', settings: { ...defaultSettings(), ...over }, days: Object.fromEntries(days.map((d) => [d.date, d])), weeks })
+const file = (days: DayEntry[], over = {}, weeks = {}): BackupFile => ({ app: 'janu-sthira', version: 1, exportedAt: '2026-10-20T00:00:00Z', settings: { ...defaultSettings(), ...over }, days: Object.fromEntries(days.map((d) => [d.date, d])), weeks })
 
 describe('merge import', () => {
   it('adds new days and combines the same day from both devices without losing anything', () => {

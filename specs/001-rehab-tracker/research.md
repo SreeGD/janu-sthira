@@ -1,4 +1,4 @@
-# Research: Jānu Setu
+# Research: Jānu Sthira
 
 ## R1. Framework and build
 - **Decision**: Vite + React + TypeScript.

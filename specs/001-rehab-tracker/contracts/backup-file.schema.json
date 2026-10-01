@@ -1,10 +1,10 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Jānu Setu backup",
+  "title": "Jānu Sthira backup",
   "type": "object",
   "required": ["app", "version", "exportedAt", "settings", "days"],
   "properties": {
-    "app": { "enum": ["janu-setu", "jaanu-setu"], "description": "jaanu-setu is the legacy value from before the rename" },
+    "app": { "enum": ["janu-sthira", "janu-setu", "jaanu-setu"], "description": "janu-setu and jaanu-setu are legacy values from before the renames" },
     "version": { "type": "integer", "minimum": 1 },
     "exportedAt": { "type": "string", "format": "date-time" },
     "settings": { "type": "object" },

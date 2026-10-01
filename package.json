@@ -1,8 +1,8 @@
 {
-  "name": "janu-setu",
+  "name": "janu-sthira",
   "private": true,
   "version": "0.1.0",
-  "description": "Jānu Setu: offline-first ACL rehab tracker (PWA)",
+  "description": "Jānu Sthira: offline-first ACL rehab tracker (PWA)",
   "license": "GPL-3.0-or-later",
   "type": "module",
   "scripts": {

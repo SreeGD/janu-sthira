@@ -14,9 +14,9 @@ export default defineConfig({
       includeAssets: ['icons/*.svg', 'illustrations/*.svg'],
       workbox: { globPatterns: ['**/*.{js,css,html,svg,png,ico,webmanifest}'] },
       manifest: {
-        name: 'Jānu Setu',
-        short_name: 'Jānu Setu',
-        description: 'A bridge back to a confident knee: ACL rehab tracker',
+        name: 'Jānu Sthira',
+        short_name: 'Jānu Sthira',
+        description: 'A steady path back to a confident knee: ACL rehab tracker',
         theme_color: '#1f3a5f',
         background_color: '#f6f8fa',
         display: 'standalone',

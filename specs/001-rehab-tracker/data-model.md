@@ -1,4 +1,4 @@
-# Data Model: Jānu Setu
+# Data Model: Jānu Sthira
 
 Static content types live in `src/content/`; user data lives in IndexedDB.
 

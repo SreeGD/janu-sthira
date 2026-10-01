@@ -33,7 +33,7 @@ export default function Settings() {
     const f = new File([json], backupFileName(), { type: 'application/json' })
     try {
       if (navigator.canShare?.({ files: [f] })) {
-        await navigator.share({ files: [f], title: 'Jānu Setu backup' })
+        await navigator.share({ files: [f], title: 'Jānu Sthira backup' })
         await reload()
         setMsg('Shared.')
         return
