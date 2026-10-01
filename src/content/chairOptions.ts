@@ -1,0 +1,40 @@
+/** Seated alternatives, by card code. For days when standing or the floor is unsafe or too painful.
+ *  Use a sturdy chair without wheels, ideally against a wall, with both feet able to reach the floor. */
+export const chairIntro =
+  'Chair versions are for days when standing is unsafe or too painful, when balance is poor, or when you are working at a desk. Use a sturdy chair without wheels, ideally with its back against a wall. They are a good alternative, not a reason to stop standing exercises once you are able.'
+
+export const chairOptions: Record<string, string> = {
+  M1: 'Sit with the injured leg out straight, heel on the floor or a low stool. Do the pumps and the slow circles exactly as described.',
+  M2: 'Sit tall on the chair. Slide the injured foot back along the floor to bend the knee, hold 3-5 seconds, then slide it forward until the knee is straight. This is the same movement as K1. 10-15 slides.',
+  M3: 'Sit near the front edge of the chair with the injured leg straight and the heel on the floor or a low stool, toes up. Sit tall and hinge forward from the hips with a straight back until you feel a stretch behind the thigh. Hold 5-8 breaths, 3 times.',
+  M4: 'Seated calf stretch: sit tall with the injured leg straight and the heel on the floor, a strap around the ball of the foot. Gently pull the toes toward you. Hold 5 breaths, 3 times. Add a seated forward fold (hands sliding down the thighs) for the hamstrings.',
+  M5: 'Sit with the injured leg straight out on a second chair or stool, heel supported. Tighten the front of the thigh so the kneecap slides up and the knee presses down, toes pulled toward you. Hold 5 seconds, 10 times.',
+  M6: 'There is no true chair version of walking. On days you cannot walk, do seated marching for 2-3 minutes (lift one foot a few centimetres at a time) every hour or two, plus ankle pumps (M1), to keep the circulation going.',
+  L1: 'Seated leg raise: sit tall, straighten the knee fully and hold the leg out level for 2 seconds, then lower slowly. 3 sets of 10. Use no ankle weight in this version.',
+  L2: 'Seated glute squeeze: sit tall and squeeze the buttocks together as hard as is comfortable. Hold 5 seconds, 10-15 times.',
+  L3: 'Seated knee press-out: sit with knees bent and feet flat, a band or strap loop just above the knees (or none). Press the knees apart, hold 3 seconds, return. 3 sets of 10-15.',
+  L4: 'Sit tall near the front of the chair. Straighten the injured leg and slide it out to the side along the floor, toes forward, then back. 3 sets of 10-15.',
+  L5: 'Sit on a chair with the injured heel resting on a stool or a second chair. Nothing under the knee. Relax the thigh and let gravity straighten the knee. 10 minutes. Do one quad set every minute.',
+  E1: 'No bike? Do 15 minutes of seated heel slides (M2), ankle pumps (M1) and seated knee bends (K1).',
+  E2: 'Seated calf raise: sit with feet flat, lift the heels off the floor, hold 2 seconds and lower slowly. 3 sets of 15-20. Press a light weight onto the thighs to make it harder.',
+  E3: 'Seated version: single-leg calf raises and straight-leg raises on the good leg (L1 chair version). Standing up from the chair on the good leg is itself the exercise when you are able.',
+  E4: 'Seated balance: sit tall on the front edge of the chair with hands on the thighs. Lift one foot a few centimetres off the floor and hold 10-30 seconds, then switch. Keep the knee pointing forward.',
+  E5: 'Seated quad strength: sit tall, straighten the knee and hold the leg out for 10 seconds (L1 chair version), 5 times. Or slowly stand up and sit down from a firm chair using your hands lightly, 5 times.',
+  E6: 'Seated core brace: sit tall, tighten the tummy as if bracing for a cough, keep breathing. Hold 10-20 seconds, 3 times.',
+  E7: 'Seated side bend: sit tall, slide one hand down the side of the chair or your leg and lean sideways, then return. 8-10 each side.',
+  E8: 'Seated arm and leg reach: sit tall, reach one arm forward and straighten the opposite knee, hold 2 seconds, switch. 8-10 each side.',
+  E9: 'Seated back extension: sit tall, squeeze the shoulder blades together and the buttocks, lift the chest. Hold 5 breaths, 3 times.',
+  E10: 'Recline in a chair or armchair with both legs up on a second chair or stool, as high as is comfortable. 5 minutes. Keep the knee straight and supported at the heel.',
+  E11: 'Recline in a chair or armchair with a roll under the heel of the injured leg (not under the knee) so the knee can keep straightening. Rest 5-10 minutes.',
+  B1: 'Seated band knee extension against resistance puts load on the front of the shin, which a knee without an ACL does not like. Ask your physio first. Safer chair options: the seated quad hold (M5 chair version) and the seated hamstring curl (B2 chair version).',
+  B2: 'Sit on a chair with the band anchored in front of you. Loop it around the injured ankle and pull the heel back under the chair. Return slowly over 3 counts. 2-3 sets of 12-15.',
+  B3: 'Seated leg press: sit tall with the band around the sole of the injured foot and hold the ends at chest level. Push the foot forward until the knee is straight, then return slowly. 2-3 sets of 12-15.',
+  B4: 'Seated band press-out: band loop above both knees, feet flat. Press the knees apart, hold 3 seconds, return. 3 sets of 12.',
+  B5: 'Seated band hip abduction: band loop around both knees. Press the knees apart and back. Follow with a seated glute squeeze. 2 sets of 12-15.',
+  B6: 'Seated band knee press-out (see B4), or seated side-steps with the feet sliding apart and together against the band, 10 each way.',
+  B7: 'This exercise is already done seated. Sit tall with legs straight (a cushion under the hips helps).',
+  B8: 'Do the Pallof press sitting tall on a firm chair with no wheels, feet flat. Press the hands straight out and hold 3 seconds without letting the body turn. 2 sets of 10 each side.',
+  K1: 'This exercise is already done seated.',
+  K2: 'The chair version is K1, the seated knee bend: slide the foot back under the chair and hold for 10 seconds.',
+  K3: 'Use a chair for meals and prayers instead of sitting on the floor. Keep the injured leg out straight on a stool if the knee is stiff.',
+}

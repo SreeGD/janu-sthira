@@ -83,7 +83,12 @@ export function TodayFor({ date }: { date: string }) {
         <span>Yoga day: swap the evening session for the 40-minute yoga sequence</span>
       </label>
 
-      <SessionList sessions={plan.sessions} ticked={entry.ticked} onToggle={toggleTick} />
+      <label className="panel flex items-center gap-3">
+        <input type="checkbox" className="h-6 w-6" checked={!!settings.chairMode} onChange={(e) => updateSettings({ chairMode: e.target.checked })} />
+        <span>Chair mode: show a seated option under each exercise</span>
+      </label>
+
+      <SessionList sessions={plan.sessions} ticked={entry.ticked} onToggle={toggleTick} chairMode={!!settings.chairMode} />
 
       <h2 className="h-title mt-2">Through the day</h2>
       <Counter label="Quad sets (sets of 10)" value={entry.counters.quadSets} target={6} onChange={(v) => update((d) => ({ ...d, counters: { ...d.counters, quadSets: v } }))} />

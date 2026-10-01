@@ -1,6 +1,7 @@
+import { chairOptions } from './chairOptions'
 import type { ExerciseCard } from './types'
 
-export const cards: ExerciseCard[] = [
+const baseCards: ExerciseCard[] = [
   // ---------- Morning ----------
   {
     code: 'M1', name: 'Ankle Pumps and Circles', group: 'M', category: 'Circulation',
@@ -455,5 +456,7 @@ export const cards: ExerciseCard[] = [
     easier: 'sit on a chair instead of the floor for meals and prayers.',
   },
 ]
+
+export const cards: ExerciseCard[] = baseCards.map((c) => ({ ...c, chair: chairOptions[c.code] }))
 
 export const cardByCode = new Map(cards.map((c) => [c.code, c]))

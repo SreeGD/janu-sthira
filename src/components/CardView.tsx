@@ -35,6 +35,11 @@ export function CardView({ card }: { card: ExerciseCard }) {
       <Line label="EASIER:" color="var(--navy)">{card.easier}</Line>
       <Line label="HARDER:" color="var(--navy)">{card.harder}</Line>
       <Line label="STOP IF:" color="var(--bad)">{card.stopIf}</Line>
+      {card.chair && (
+        <div className="mt-3 rounded-lg p-3 text-sm" style={{ background: 'color-mix(in srgb, var(--teal) 10%, var(--surface))', border: '1px solid var(--teal)' }}>
+          <strong style={{ color: 'var(--teal)' }}>🪑 ON A CHAIR:</strong> {card.chair}
+        </div>
+      )}
     </article>
   )
 }

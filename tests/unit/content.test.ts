@@ -59,3 +59,17 @@ describe('juices and drinks', () => {
     expect(drinks.cautions.join(' ')).toMatch(/grapefruit/i)
   })
 })
+
+import { chairOptions } from '../../src/content/chairOptions'
+
+describe('chair options', () => {
+  it('every card has a seated alternative', () => {
+    for (const c of cards) expect((c.chair ?? '').length, c.code).toBeGreaterThan(30)
+  })
+  it('has no entries for unknown cards', () => {
+    for (const code of Object.keys(chairOptions)) expect(cardByCode.has(code), code).toBe(true)
+  })
+  it('does not suggest weights for the open-chain leg raise', () => {
+    expect(chairOptions.L1).toMatch(/no ankle weight/i)
+  })
+})

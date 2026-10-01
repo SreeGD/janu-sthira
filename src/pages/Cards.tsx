@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { bandBasics } from '../content/bandBasics'
 import { cardByCode, cards } from '../content/cards'
+import { chairIntro } from '../content/chairOptions'
 import type { CardGroup } from '../content/types'
 import { CardView } from '../components/CardView'
 import { Page, Section } from '../components/ui'
@@ -13,10 +14,11 @@ const groups: { id: CardGroup | 'all'; label: string }[] = [
 export default function Cards() {
   const [q, setQ] = useState('')
   const [g, setG] = useState<CardGroup | 'all'>('all')
+  const [chairOnly, setChairOnly] = useState(false)
   const list = useMemo(() => {
     const t = q.trim().toLowerCase()
-    return cards.filter((c) => (g === 'all' || c.group === g) && (!t || `${c.code} ${c.name} ${c.category}`.toLowerCase().includes(t)))
-  }, [q, g])
+    return cards.filter((c) => (g === 'all' || c.group === g) && (!chairOnly || !!c.chair) && (!t || `${c.code} ${c.name} ${c.category}`.toLowerCase().includes(t)))
+  }, [q, g, chairOnly])
 
   return (
     <Page title="Exercise cards">
@@ -29,6 +31,10 @@ export default function Cards() {
           <button key={x.id} type="button" className={`btn ${g === x.id ? 'btn-primary' : ''}`} aria-pressed={g === x.id} onClick={() => setG(x.id)}>{x.label}</button>
         ))}
       </div>
+      <label className="panel flex items-start gap-3 text-sm">
+        <input type="checkbox" className="mt-0.5 h-6 w-6 shrink-0" checked={chairOnly} onChange={(e) => setChairOnly(e.target.checked)} />
+        <span><strong>Chair versions only.</strong> <span className="muted">{chairIntro}</span></span>
+      </label>
       {(g === 'all' || g === 'B') && !q && (
         <Section title="Band basics">
           <ul className="list-disc pl-5 text-sm">{bandBasics.map((b) => <li key={b}>{b}</li>)}</ul>

@@ -1,18 +1,28 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { cardByCode } from '../content/cards'
 import type { PlannedSession } from '../domain/planEngine'
 
 const slotColor: Record<string, string> = {
   morning: '#a85f0f', midmorning: '#4a6785', lunch: '#1f7a7a', afternoon: '#4a6785', evening: '#5b4a8a', bedtime: '#3c4a6b',
 }
 
+function chairTextFor(codes: string[]): string | undefined {
+  for (const c of codes) {
+    const t = cardByCode.get(c)?.chair
+    if (t) return t
+  }
+  return undefined
+}
+
 interface Props {
   sessions: PlannedSession[]
   ticked: string[]
   onToggle: (id: string) => void
+  chairMode?: boolean
 }
 
-export function SessionList({ sessions, ticked, onToggle }: Props) {
+export function SessionList({ sessions, ticked, onToggle, chairMode }: Props) {
   const incomplete = (s: PlannedSession) => s.items.some((i) => i.status !== 'skipped' && !ticked.includes(i.item.id))
   const firstOpen = sessions.find(incomplete)?.id
   const [open, setOpen] = useState<Record<string, boolean>>({})
@@ -58,6 +68,11 @@ export function SessionList({ sessions, ticked, onToggle }: Props) {
                       {p.amount && <span className="muted block text-sm">{p.amount}</span>}
                       {p.status === 'halved' && <span className="chip ml-1">halved</span>}
                       {skipped && <span className="chip ml-1">skip today</span>}
+                      {chairMode && !skipped && chairTextFor(p.item.cardCodes) && (
+                        <span className="mt-1 block rounded-md px-2 py-1 text-sm" style={{ background: 'color-mix(in srgb, var(--teal) 10%, var(--surface))' }}>
+                          <strong style={{ color: 'var(--teal)' }}>🪑 On a chair:</strong> {chairTextFor(p.item.cardCodes)}
+                        </span>
+                      )}
                     </label>
                     <span className="flex shrink-0 flex-wrap justify-end gap-1">
                       {p.item.cardCodes.map((c) => (

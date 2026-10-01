@@ -14,6 +14,8 @@ export interface ExerciseCard {
   easier?: string
   harder?: string
   stopIf?: string
+  /** seated alternative */
+  chair?: string
 }
 
 export type ItemTag = 'walk' | 'bike' | 'skip-puffy' | 'standing' | 'rest-ok'
@@ -76,6 +78,8 @@ export interface Settings {
   shoppingChecked?: Record<string, string[]>
   /** supplement id -> where the user is with it */
   supplementStatus?: Record<string, 'asked' | 'taking' | 'declined'>
+  /** show seated alternatives under each schedule item */
+  chairMode?: boolean
   backupLastAt?: string
 }
 
