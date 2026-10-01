@@ -6,6 +6,10 @@ A bridge back to a confident knee: an offline-first, mobile-first tracker for a 
 
 This repository contains no personal or health data. Everything you enter stays in your own browser.
 
+## Try it
+
+Live app: https://sreegd.github.io/jaanu-setu-app/ (open once online; then it works offline and can be added to your home screen).
+
 ## Run
 
 ```bash
@@ -18,8 +22,7 @@ npm run preview    # serve the build
 
 ## Deploy
 
-`dist/` is a static site (hash routing, relative base), so it works from any static host:
-GitHub Pages, Netlify, or `npx serve dist`. Open it once online; after that it works offline and can be added to the home screen.
+`dist/` is a static site (hash routing, relative base), so it works from any static host. This repo deploys to GitHub Pages automatically from `main` via `.github/workflows/pages.yml`; you can also use Netlify or `npx serve dist`. Open it once online; after that it works offline and can be added to the home screen.
 
 ## Your data
 
