@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { dailyPattern, eatLess, flavourTip, mealsForDay, nutrients, plateGuide, powderNote, powderRoutine, proteinReference, proteinTarget, rotation, soups, waterGoalL } from '../content/food'
+import { dailyPattern, drinks, eatLess, flavourTip, mealsForDay, nutrients, plateGuide, powderNote, powderRoutine, proteinReference, proteinTarget, rotation, soups, waterGoalL } from '../content/food'
 import { Bar, Page, Section } from '../components/ui'
 import { weekdayIndex } from '../domain/dates'
 import { proteinTotal } from '../domain/protein'
@@ -18,7 +18,7 @@ export default function Food() {
 
   return (
     <Page title="Food for a stronger knee">
-      <p className="muted -mt-2 text-sm">Strictly vegetarian · no onion, garlic or root vegetables</p>
+      <p className="muted -mt-2 text-sm">Vegetarian · no onion or garlic</p>
       <Link to="/shopping" className="btn btn-primary w-full">Weekly shopping list: view and share</Link>
       <Link to="/supplements" className="btn w-full">Supplements: vegetarian options</Link>
       <Bar value={total} max={proteinTarget} label="Protein today (g)" />
@@ -71,6 +71,17 @@ export default function Food() {
 
       <Section title="Protein quick reference">
         <table><tbody>{proteinReference.map(([f, p]) => <tr key={f}><td>{f}</td><td>{p}</td></tr>)}</tbody></table>
+      </Section>
+
+      <Section title="Juices and drinks">
+        <p className="muted mb-2 text-sm">Whole fruit beats juice, and water is the main drink. No juice is in the meal plan; if you like juice, here is how to fit it in.</p>
+        {([['Have freely', 'var(--good)', '✓', drinks.good], ['Small amounts', 'var(--warn)', '~', drinks.limit], ['Avoid', 'var(--bad)', '✕', drinks.avoid]] as const).map(([title, color, icon, list]) => (
+          <div key={title} className="mb-3">
+            <h3 className="text-sm font-bold" style={{ color }}><span aria-hidden>{icon} </span>{title}</h3>
+            <ul className="mt-1 text-sm">{list.map((d) => <li key={d.name} className="mb-1"><strong>{d.name}.</strong> <span className="muted">{d.note}</span></li>)}</ul>
+          </div>
+        ))}
+        <ul className="list-disc pl-5 text-sm">{drinks.cautions.map((c) => <li key={c}>{c}</li>)}</ul>
       </Section>
 
       <Section title="Eat less of">

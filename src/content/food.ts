@@ -20,7 +20,7 @@ export const plateGuide = 'Half vegetables, greens and salad; a quarter protein 
 /** Fixed daily slots; the 'dishes' text for breakfast/snack/dinner depends on the weekday rotation. */
 export const dailyPattern: { key: string; slot: string; what: string; proteinG: number }[] = [
   { key: 'prewalk', slot: 'Before morning walk', what: 'Warm water, 5 soaked almonds, 2 walnuts, 1 tsp flaxseed', proteinG: 4 },
-  { key: 'midam', slot: 'Mid-morning', what: 'Guava, orange or amla + roasted chana or buttermilk', proteinG: 7 },
+  { key: 'midam', slot: 'Mid-morning', what: 'Guava, orange or amla (whole fruit is best; a small glass of fresh juice is fine) + roasted chana or buttermilk', proteinG: 7 },
   { key: 'bedtime', slot: 'Bedtime', what: 'Warm milk with a pinch of turmeric and black pepper', proteinG: 8 },
 ]
 
@@ -81,3 +81,39 @@ export const powderRoutine = [
 
 export const powderNote =
   'Skip ashwagandha (a root, and a rare cause of liver injury) and giloy (liver injury cases). Discuss boswellia and turmeric extracts with your doctor first, especially if you have vein problems. Buy powders from reputable brands with lab testing, and start one new powder at a time for a week.'
+
+export interface Drink {
+  name: string
+  note: string
+}
+
+/** Juices and drinks, grouped by how freely to have them. Follows the plan's rules: vegetarian, no onion or garlic. */
+export const drinks = {
+  good: [
+    { name: 'Plain water', note: 'The main drink: 2.5-3 litres a day across the day. It helps the veins and avoids constipation and straining.' },
+    { name: 'Warm water with amla powder or lemon', note: 'Before the morning walk. Lemon adds vitamin C and no sugar.' },
+    { name: 'Buttermilk (chaas)', note: 'Plain, lightly salted. A good protein and calcium snack with roasted chana.' },
+    { name: 'Tender coconut water', note: 'A glass on hot days or after a long walk. Natural potassium; no added sugar.' },
+    { name: 'Jeera, ajwain or fennel water, unsweetened herbal tea', note: 'Flavour without sugar.' },
+    { name: 'Warm haldi milk at bedtime', note: 'Already in the plan: about 8 g protein.' },
+  ] as Drink[],
+  limit: [
+    { name: 'Fresh orange, mosambi, guava or pomegranate juice', note: 'One small glass (about 150 ml), freshly squeezed with no added sugar, taken with a protein snack or a meal. Whole fruit is better: the fibre slows the sugar and keeps you full. Count juice as a fruit serving, not as water.' },
+    { name: 'Fresh amla juice', note: 'Rich in vitamin C. Dilute it with water and keep it small: it is sour and can upset the stomach.' },
+    { name: 'Carrot juice', note: 'Vitamin A and natural sugar, with the fibre removed. One small glass with a meal; the whole carrot is better.' },
+    { name: 'Beetroot juice', note: 'Can lower blood pressure a little. Keep it to a small glass, and ask your doctor first if you take blood pressure medicine.' },
+    { name: 'Sugarcane juice', note: 'A big dose of sugar. Only occasionally and a small glass.' },
+  ] as Drink[],
+  avoid: [
+    { name: 'Packaged and bottled juices, nectars and squashes', note: 'Mostly added sugar with little fibre. Sugar fuels inflammation and weight gain.' },
+    { name: 'Soft drinks, energy drinks, sweet lassi and sugary milkshakes', note: 'Empty calories and sugar with no benefit for the muscle you are rebuilding.' },
+    { name: 'Very salty drinks (salted lassi, heavily salted lime water)', note: 'Salt worsens swelling and is hard on the leg veins.' },
+    { name: '"Detox" or juice-only cleanses', note: 'They cut the protein your muscles need.' },
+    { name: 'Alcohol', note: 'Disturbs sleep and recovery and can interact with medicines. Ask your doctor before drinking.' },
+  ] as Drink[],
+  cautions: [
+    'Grapefruit juice interacts with many medicines. If you take regular medicines, ask your pharmacist before having it.',
+    'Amla and bitter-gourd juices can lower blood sugar. If you take diabetes medicine, ask your doctor first.',
+    'Have juice with protein (for example roasted chana or curd), not on its own, so the sugar is absorbed more slowly.',
+  ],
+}

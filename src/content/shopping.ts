@@ -1,5 +1,5 @@
 /** Weekly grocery list for one person, derived from the 7-day rotation, daily pattern, soups and powders.
- *  Quantities are approximate; no onion, garlic or root vegetables. */
+ *  Quantities are approximate; no onion or garlic. */
 export interface ShoppingItem {
   id: string
   name: string
@@ -85,6 +85,7 @@ export const shoppingList: ShoppingCategory[] = [
       i('orange', 'Oranges', '4'),
       i('amla', 'Amla (fresh)', '4', 'or use powder'),
       i('fruit-bowl', 'Fruit for Sunday bowl', '1 kg', 'seasonal'),
+      i('tender-coconut', 'Tender coconut (optional)', '2', 'coconut water on hot days'),
     ],
   },
   {
@@ -116,4 +117,4 @@ export const shoppingList: ShoppingCategory[] = [
 ]
 
 export const shoppingNote =
-  'Quantities are approximate for one person for 7 days. Adjust for your household. Everything here follows your rule: vegetarian, no onion, garlic or root vegetables.'
+  'Quantities are approximate for one person for 7 days. Adjust for your household. Everything here follows your rule: vegetarian, no onion or garlic.'

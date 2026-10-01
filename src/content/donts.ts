@@ -81,6 +81,7 @@ export const dontGroups: DontGroup[] = [
     title: 'Food and supplements',
     items: [
       d('salty-fried', "Don't lean on salty, fried and sugary foods", 'Salt worsens swelling and strains the veins; fried and sugary foods fuel inflammation and weight gain.', 'Keep pickles, papad and namkeen small, and favour protein, vegetables, fruit and plenty of water.'),
+      d('juice-swap', "Don't swap fruit for packaged, sweetened or large servings of juice", 'Juice has little fibre and a fast sugar hit, and packaged juice is mostly added sugar.', 'Eat whole fruit. If you want juice, have a small fresh glass (about 150 ml) with a protein snack.'),
       d('skip-protein', "Don't skimp on protein", 'Muscle is your new ACL, and it needs protein to rebuild.', 'Aim for protein across the day, with 20-30 g at each main meal.'),
       d('many-supps', "Don't start several supplements at once or self-dose", 'You cannot tell what disagrees with you, and some interact with medicines or the blood.', 'Ask your doctor first and start one product at a time for a week. Test vitamin D and B12 before taking them.'),
       d('risky-herbs', "Don't take ashwagandha or giloy", 'Rare cases of liver injury are reported.', 'Skip them. Cooking amounts of turmeric are fine.'),

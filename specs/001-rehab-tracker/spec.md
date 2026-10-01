@@ -125,7 +125,7 @@ A reference page explains common MRI findings in plain language with "what it ch
 
 ### User Story 8 - Vegetarian food plan and protein tracking (Priority: P3)
 
-The user sees the food plan (strictly vegetarian, no onion, garlic or root vegetables): the plate guide, the daily eating pattern, and the 7-day rotation for breakfast, lunch, evening snack and dinner. Today's meals are shown with estimated protein; the user ticks meals eaten and sees protein progress against about 105 g/day, plus a water goal (2.5–3 L).
+The user sees the food plan (vegetarian, no onion or garlic): the plate guide, the daily eating pattern, and the 7-day rotation for breakfast, lunch, evening snack and dinner. Today's meals are shown with estimated protein; the user ticks meals eaten and sees protein progress against about 105 g/day, plus a water goal (2.5–3 L).
 
 **Why this priority**: Supports recovery, but it is secondary to the exercise loop.
 
@@ -168,7 +168,7 @@ The user sees the food plan (strictly vegetarian, no onion, garlic or root veget
 - **FR-013**: The system MUST let the user flag that a Doppler scan was advised, then show a reminder until it is marked done.
 - **FR-014**: The system MUST present the MRI findings page and the first 2–3 week adjustments.
 - **FR-015**: The system MUST show programme week, and the 6-week, 3-month and 6-month checkpoints with notes, from a user-set start date.
-- **FR-016**: The system MUST present the vegetarian food plan (plate guide, eating pattern, 7-day rotation) and respect the no onion, garlic or root vegetables constraint in all content.
+- **FR-016**: The system MUST present the vegetarian food plan (plate guide, eating pattern, 7-day rotation) and respect the no onion or garlic constraint in all content.
 - **FR-017**: Users MUST be able to tick meals and see protein progress against about 105 g and water against the daily goal.
 - **FR-018**: The system MUST work fully offline after first load, be usable on a phone-sized screen, and store all data on the user's device only, without accounts.
 - **FR-019**: Users MUST be able to export and import their data as a backup file.
@@ -195,7 +195,7 @@ The user sees the food plan (strictly vegetarian, no onion, garlic or root veget
 - **SC-005**: The calf-pain/swelling warning is visible within 1 tap from any screen and is shown immediately on entry of those symptoms.
 - **SC-006**: A week of use can be reviewed in a single view showing adherence per day and session.
 - **SC-007**: The plan shown for each knee-check outcome matches the programme's rules in 100% of test cases.
-- **SC-008**: No meal in the food plan contains onion, garlic or root vegetables.
+- **SC-008**: No meal in the food plan contains onion or garlic.
 
 ## Assumptions
 

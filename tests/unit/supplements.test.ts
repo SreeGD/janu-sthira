@@ -19,8 +19,8 @@ describe('supplements content', () => {
     expect(supplements.find((s) => s.id === 'collagen')?.stance).toBe('skip')
     expect(supplements.find((s) => s.id === 'glucosamine')?.stance).toBe('skip')
   })
-  it('does not mention onion, garlic or root vegetables as recommendations', () => {
+  it('does not mention onion or garlic as recommendations', () => {
     const text = JSON.stringify(supplements.map((s) => [s.why, s.vegOption, s.food, s.how]))
-    expect(text).not.toMatch(/onion|garlic|potato|carrot|beetroot|radish/i)
+    expect(text).not.toMatch(/onion|garlic/i)
   })
 })

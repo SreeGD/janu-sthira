@@ -157,7 +157,7 @@ description: "Task list for Jānu Sthira – ACL Rehab Tracker"
 
 - [X] T057 [P] [US8] Transcribe plate guide, nutrient table, daily eating pattern (with protein per slot) and 7-day rotation in `src/content/food.ts`
 - [X] T058 [P] [US8] Implement `protein` totals vs 105 g target in `src/domain/protein.ts` with tests in `tests/unit/protein.test.ts`
-- [X] T059 [P] [US8] Content test: no food string matches onion|garlic|potato|carrot|beetroot|radish in `tests/unit/content.test.ts`
+- [X] T059 [P] [US8] Content test: no food string matches onion|garlic in `tests/unit/content.test.ts`
 - [X] T060 [US8] Food page: today's meals, ticks, protein bar, water goal (2.5–3 L), full rotation view in `src/pages/Food.tsx`
 
 ---

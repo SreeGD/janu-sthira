@@ -23,7 +23,7 @@ export default function Supplements() {
 
   return (
     <Page title="Supplements" back={<Link to="/food" className="muted mb-2 inline-flex items-center text-sm">← Food</Link>}>
-      <p className="muted -mt-2 text-sm">Vegetarian options · no onion, garlic or root vegetables</p>
+      <p className="muted -mt-2 text-sm">Vegetarian options · no onion or garlic</p>
       <p className="text-sm">{supplementIntro}</p>
       <WarningBanner level="warn">{supplementWarning}</WarningBanner>
       {settings.dopplerAdvised && !settings.dopplerDone && <WarningBanner level="info">Venous Doppler scan is not marked done yet. <Link to="/safety" className="underline">Safety</Link></WarningBanner>}

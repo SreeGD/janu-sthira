@@ -33,7 +33,7 @@
 - **Alternatives**: Extracting images from the PDF (low quality, licensing unclear).
 
 ## R8. Content fidelity
-- **Decision**: Transcribe cards verbatim from the PDF into typed data; a content-integrity test checks every schedule card code resolves to a card and no food item contains onion, garlic, potato, carrot, beetroot or radish.
+- **Decision**: Transcribe cards verbatim from the PDF into typed data; a content-integrity test checks every schedule card code resolves to a card and no food item contains onion or garlic.
 - **Rationale**: Safety and SC-008.
 
 ## R9. Yoga sequence

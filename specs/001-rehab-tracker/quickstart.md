@@ -19,5 +19,5 @@ npm run build && npm run preview
 5. **Offline**: `npm run build && npm run preview`, load once, set DevTools to Offline, reload; app works.
 6. **Backup** (FR-019): export, clear site data, import; schema in [contracts/backup-file.schema.json](contracts/backup-file.schema.json); data restored.
 7. **Safety** (US6): enter calf warning in log; banner appears; Doppler to-do clears when marked done.
-8. **Food** (US8/SC-008): content test fails if any food string matches onion|garlic|potato|carrot|beetroot|radish.
+8. **Food** (US8/SC-008): content test fails if any food string matches onion|garlic.
 9. **Mobile**: check at 360×740 viewport, light and dark.

@@ -19,7 +19,7 @@ describe("don'ts content", () => {
     expect(topDonts.length).toBeGreaterThanOrEqual(3)
     expect(topDonts.length).toBeLessThanOrEqual(6)
   })
-  it('has no personal references or onion/garlic/root-vegetable recommendations', () => {
-    expect(JSON.stringify(dontGroups)).not.toMatch(/\bleft (knee|leg|foot)|your MRI|onion|garlic|potato|carrot|beetroot|radish/i)
+  it('has no personal references or onion/garlic recommendations', () => {
+    expect(JSON.stringify(dontGroups)).not.toMatch(/\bleft (knee|leg|foot)|your MRI|onion|garlic/i)
   })
 })

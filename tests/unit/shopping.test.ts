@@ -6,9 +6,9 @@ describe('shopping list', () => {
     const ids = allItemIds()
     expect(new Set(ids).size).toBe(ids.length)
   })
-  it('contains no onion, garlic or root vegetables', () => {
+  it('contains no onion or garlic', () => {
     const text = JSON.stringify(shoppingList)
-    expect(text).not.toMatch(/onion|garlic|potato|carrot|beetroot|radish/i)
+    expect(text).not.toMatch(/onion|garlic/i)
   })
   it('share text lists everything by default and skips bought items', () => {
     const all = shoppingText('2026-10-05', [], true)
