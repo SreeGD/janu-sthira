@@ -38,7 +38,7 @@ export const livingTips: { title: string; points: string[] }[] = [
       'Strength for life: 2-3 strength and balance sessions a week after the 6-month programme.',
       'Turn with small steps; never pivot on the planted foot of the injured leg.',
       'Stairs: hold the rail; lead with the injured leg going down, the good leg going up.',
-      'Avoid deep squatting, cross-legged floor sitting and Indian-style toilets.',
+      'Avoid deep squatting, cross-legged floor sitting, sitting on your heels and Indian-style toilets. Sit on a cushion or low stool with the injured leg out straight (card K3).',
       'Home safety: anti-slip bathroom mats, a grab bar, night lights, clutter-free floors, shoes with grip.',
       "Don't let fear make you inactive.",
     ],

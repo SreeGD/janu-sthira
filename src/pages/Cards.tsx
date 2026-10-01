@@ -7,7 +7,7 @@ import { CardView } from '../components/CardView'
 import { Page, Section } from '../components/ui'
 
 const groups: { id: CardGroup | 'all'; label: string }[] = [
-  { id: 'all', label: 'All' }, { id: 'M', label: 'Morning' }, { id: 'L', label: 'Lunch' }, { id: 'E', label: 'Evening' }, { id: 'B', label: 'Bands' },
+  { id: 'all', label: 'All' }, { id: 'M', label: 'Morning' }, { id: 'L', label: 'Lunch' }, { id: 'E', label: 'Evening' }, { id: 'B', label: 'Bands' }, { id: 'K', label: 'Bend' },
 ]
 
 export default function Cards() {
@@ -21,6 +21,8 @@ export default function Cards() {
   return (
     <Page title="Exercise cards">
       <input type="text" placeholder="Search by code or name (e.g. M5, bridge)" aria-label="Search cards" value={q} onChange={(e) => setQ(e.target.value)} />
+      <Link to="/donts" className="btn w-full">Don'ts: what makes it worse</Link>
+      <Link to="/bend" className="btn w-full">Getting the bend back: guide and cross-legged sitting</Link>
       <div className="flex flex-wrap gap-2" role="group" aria-label="Filter by session">
         {groups.map((x) => (
           <button key={x.id} type="button" className={`btn ${g === x.id ? 'btn-primary' : ''}`} aria-pressed={g === x.id} onClick={() => setG(x.id)}>{x.label}</button>

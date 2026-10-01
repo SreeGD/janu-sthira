@@ -29,6 +29,10 @@ export function DayLogForm({ entry, onChange }: Props) {
         Walk minutes
         <input type="number" min={0} max={240} inputMode="numeric" value={log.walkMin ?? ''} onChange={(e) => setLog({ walkMin: num(e.target.value) })} />
       </label>
+      <label className="block text-sm font-semibold">
+        Bend check, once a week: heel to buttock distance (cm, lying face down)
+        <input type="number" min={0} max={80} step={0.5} inputMode="decimal" value={log.heelToButtockCm ?? ''} onChange={(e) => setLog({ heelToButtockCm: num(e.target.value) })} />
+      </label>
       <label className="flex items-center gap-3 text-sm font-semibold">
         <input type="checkbox" className="h-6 w-6" checked={!!log.calfWarning} onChange={(e) => setLog({ calfWarning: e.target.checked })} />
         Calf painful, tender, warm, red, tight or swollen today

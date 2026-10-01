@@ -1,4 +1,4 @@
-export type CardGroup = 'M' | 'L' | 'E' | 'B'
+export type CardGroup = 'M' | 'L' | 'E' | 'B' | 'K'
 
 export interface ExerciseCard {
   code: string
@@ -88,6 +88,8 @@ export interface DayLog {
   swelling?: number
   pain?: number
   walkMin?: number
+  /** weekly bend check: distance from heel to buttock, cm (smaller = more bend) */
+  heelToButtockCm?: number
   calfWarning?: boolean
   givingWay: GivingWayEvent[]
   notes?: string

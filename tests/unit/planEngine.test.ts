@@ -82,6 +82,16 @@ describe('knee check outcomes', () => {
     expect(status(p, 'm5')).toBe('full')
     expect(p.nextWalkTarget).toBe(25)
   })
+  it('bend work: gentle on calm and puffy days, skipped on a swollen day', () => {
+    for (const k of ['better', 'puffier'] as const) {
+      const p = buildTodayPlan({ date: MON, yoga: false, kneeCheck: k, walkTarget: 20 })
+      expect(status(p, 'd-k1')).toBe('full')
+      expect(status(p, 'd-k2')).toBe('full')
+      expect(status(p, 'd-hs2')).toBe('full')
+    }
+    const s = buildTodayPlan({ date: MON, yoga: false, kneeCheck: 'swollen', walkTarget: 20 })
+    for (const id of ['d-k1', 'd-k2', 'd-hs2']) expect(status(s, id)).toBe('skipped')
+  })
   it('all outcomes covered', () => {
     const outcomes: KneeCheck[] = ['better', 'puffier', 'swollen', 'gaveWay']
     for (const o of outcomes) expect(buildTodayPlan({ date: MON, yoga: false, kneeCheck: o, walkTarget: 20 })).toBeTruthy()

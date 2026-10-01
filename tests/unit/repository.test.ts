@@ -89,6 +89,11 @@ describe('merge import', () => {
     expect(m.log.walkMin).toBe(20)
     expect(m.updatedAt).toBe('2026-10-06T12:00:00Z')
   })
+  it('keeps the heel-to-buttock measurement from either device', () => {
+    const a = { ...day('2026-10-06', '2026-10-06T08:00:00Z'), log: { givingWay: [], heelToButtockCm: 24 } }
+    const b = { ...day('2026-10-06', '2026-10-06T12:00:00Z'), log: { givingWay: [] } }
+    expect(mergeDay(a, b).log.heelToButtockCm).toBe(24)
+  })
   it('is idempotent: merging the same file twice changes nothing the second time', () => {
     const l = local([{ ...day('2026-10-06', '2026-10-06T10:00:00Z', ['a']), log: { givingWay: [], notes: 'one' } }])
     const f = file([{ ...day('2026-10-06', '2026-10-06T12:00:00Z', ['b']), log: { givingWay: [], notes: 'two' } }])

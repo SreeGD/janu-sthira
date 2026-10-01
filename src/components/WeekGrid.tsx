@@ -94,6 +94,13 @@ export function WeekGrid({ weekStart, today, days, walkTarget, selected, onSelec
           return <div key={d} role="cell" aria-label={`Giving way ${d}: ${y ? 'yes' : e ? 'no' : 'not recorded'}`} className="py-1 text-center font-bold" style={{ color: y ? 'var(--bad)' : 'var(--muted)' }}>{y ? 'Y' : e ? 'N' : '·'}</div>
         })}
       </div>
+      <div role="row" className="grid items-center gap-1" style={colStyle}>
+        <div role="rowheader" className="leading-tight"><div className="font-semibold">Bend</div><div className="muted">heel-butt cm</div></div>
+        {dates.map((d) => {
+          const v = days[d]?.log.heelToButtockCm
+          return <div key={d} role="cell" aria-label={`Bend measurement ${d}: ${v != null ? v + ' cm' : 'not measured'}`} className="py-1 text-center font-semibold">{v ?? '·'}</div>
+        })}
+      </div>
       <div role="row" className="mt-1 grid items-center gap-1 border-t pt-2" style={{ ...colStyle, borderColor: 'var(--border)' }}>
         <div role="rowheader" className="font-semibold">Day total</div>
         {dates.map((d) => {

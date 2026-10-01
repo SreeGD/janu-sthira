@@ -129,6 +129,7 @@ export function mergeDay(x: DayEntry, y: DayEntry): DayEntry {
       swelling: pickDef(n.log.swelling, o.log.swelling),
       pain: pickDef(n.log.pain, o.log.pain),
       walkMin: pickDef(n.log.walkMin, o.log.walkMin),
+      heelToButtockCm: pickDef(n.log.heelToButtockCm, o.log.heelToButtockCm),
       calfWarning: n.log.calfWarning || o.log.calfWarning || undefined,
       givingWay,
       notes: mergeText(n.log.notes, o.log.notes),

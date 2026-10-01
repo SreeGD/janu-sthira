@@ -16,6 +16,7 @@ export default function Safety() {
       <Section title={givingWayRule.title}>
         <p className="text-sm">{givingWayRule.text}</p>
       </Section>
+      <Link to="/donts" className="btn w-full">Don'ts: what makes it worse</Link>
       <Section title="Stop rules for every exercise">
         <ul className="list-disc pl-5 text-sm">{stopRules.map((c) => <li key={c}>{c}</li>)}</ul>
         <p className="mt-2 text-sm">Each card also has its own "stop if" line. <Link className="underline" to="/cards">Open cards</Link></p>

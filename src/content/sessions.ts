@@ -51,11 +51,13 @@ export const afternoon: SessionTemplate = {
   id: 'afternoon',
   slot: 'afternoon',
   title: 'Afternoon (desk)',
-  subtitle: 'heel prop #2 + quad sets + ankle pumps',
+  subtitle: 'heel prop #2, quad sets, ankle pumps, bend work',
   items: [
     item('d-hp2', 'After lunch: heel prop #2', ['L5'], { amount: '10 min', tags: ['rest-ok'] }),
     item('d-qs2', 'Mid-afternoon: 10 quad sets', ['M5'], { amount: '10 x 5-sec holds', tags: ['rest-ok'] }),
     item('d-ap', 'Mid-afternoon: 20 ankle pumps (or band ankle push, B7)', ['M1', 'B7'], { amount: '20 pumps', tags: ['rest-ok'] }),
+    item('d-hs2', 'Heel slides, second round: gently, towel around the foot for the last bit', ['M2'], { amount: '1 x 15' }),
+    item('d-k1', 'Seated knee bend: slide the foot back under the chair', ['K1'], { amount: '10 reps, hold 10 sec' }),
   ],
 }
 
@@ -131,10 +133,11 @@ export const bedtime: SessionTemplate = {
   id: 'bedtime',
   slot: 'bedtime',
   title: 'Bedtime',
-  subtitle: 'quad sets, heel prop, ice if swollen',
+  subtitle: 'quad sets, heel prop, bend, ice if swollen',
   items: [
     item('bd-qs', '10 quad sets', ['M5'], { amount: '10 x 5-sec holds', tags: ['rest-ok'] }),
     item('bd-hp3', 'Heel prop #3: Savasana with a roll under the heel', ['L5', 'E11'], { amount: '10 min', tags: ['rest-ok'] }),
+    item('d-k2', 'Face-down strap bend (gentle, never forced)', ['K2'], { amount: '5 x 10-20 sec' }),
     item('bd-ice', 'Ice 15 min if the knee is swollen (legs up the wall after the walk and in the evening)', [], { amount: '15 min', tags: ['rest-ok'] }),
   ],
 }

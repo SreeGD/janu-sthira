@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom'
 import { Page } from '../components/ui'
 
 const links = [
+  ['/donts', "Don'ts: what makes it worse"],
+  ['/bend', 'Getting the bend back (knee flexion guide)'],
   ['/shopping', 'Weekly shopping list (share)'],
   ['/supplements', 'Supplements (vegetarian options)'],
   ['/safety', 'Safety and when to call your doctor'],

@@ -46,11 +46,26 @@ export interface WeekStats {
   givingWay: number
   calfWarnings: number
   avgProtein: number
+  bendCm?: number
+  bendChangeCm?: number
   best?: string
   worst?: string
 }
 
 const avg = (xs: number[]) => (xs.length ? xs.reduce((a, b) => a + b, 0) / xs.length : undefined)
+
+function bendStats(days: Record<string, DayEntry>, weekStart: string): { bendCm?: number; bendChangeCm?: number } {
+  const val = (start: string) => {
+    for (let i = 6; i >= 0; i--) {
+      const v = days[addDays(start, i)]?.log.heelToButtockCm
+      if (v != null) return v
+    }
+    return undefined
+  }
+  const cur = val(weekStart)
+  const prev = val(addDays(weekStart, -7))
+  return { bendCm: cur, bendChangeCm: cur != null && prev != null ? Math.round((cur - prev) * 10) / 10 : undefined }
+}
 
 export function weekStats(days: Record<string, DayEntry>, weekStart: string, walkTarget = 15): WeekStats {
   const dates = Array.from({ length: 7 }, (_, i) => addDays(weekStart, i))
@@ -79,6 +94,7 @@ export function weekStats(days: Record<string, DayEntry>, weekStart: string, wal
     givingWay: entries.reduce((n, e) => n + e.log.givingWay.length, 0),
     calfWarnings: entries.filter((e) => e.log.calfWarning).length,
     avgProtein: Math.round(avg(proteins) ?? 0),
+    ...bendStats(days, weekStart),
     best, worst,
   }
 }
@@ -116,6 +132,8 @@ export function suggestNextWeek(stats: WeekStats, settings: Settings, nextCheckp
     items.push({ level: 'info', text: 'Few days logged. Keep the walk where it is and try to do the knee check every morning so the plan can adjust.' })
   }
 
+  if (stats.bendChangeCm != null && stats.bendChangeCm >= 0) items.push({ level: 'info', text: 'Heel-to-buttock distance has not shrunk since last week. Calm the swelling first (ice, legs up the wall, quad sets), keep the bend work gentle, and mention it to your physio if it stays stuck.' })
+  else if (stats.bendChangeCm != null) items.push({ level: 'info', text: `Bend is improving: heel-to-buttock distance is down ${Math.abs(stats.bendChangeCm)} cm since last week.` })
   if (stats.avgAdherence < 0.6) items.push({ level: 'info', text: 'Adherence was under 60%. Pick the two sessions that matter most (morning stretch + walk, and quad sets / heel props) and protect those first.' })
   else if (stats.avgAdherence >= 0.85) items.push({ level: 'info', text: 'Excellent consistency. Keep the same rhythm.' })
   if (stats.avgProtein > 0 && stats.avgProtein < 85) items.push({ level: 'info', text: `Protein averaged about ${stats.avgProtein} g on logged days (target about 105 g). Add paneer, curd or soya at the weakest meal.` })

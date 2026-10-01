@@ -161,6 +161,7 @@ export function WeeklyReview() {
           <Stat label="calm mornings" value={`${stats.checks.better}`} />
           <Stat label="puffy / swollen" value={`${stats.checks.puffier} / ${stats.checks.swollen}`} />
           <Stat label="giving way" value={`${stats.givingWay}`} />
+          <Stat label="heel to buttock" value={stats.bendCm != null ? `${stats.bendCm} cm` : '–'} />
         </div>
         <table className="mt-3">
           <thead><tr><th>Day</th><th>Done</th><th>Knee</th><th>Walk</th></tr></thead>

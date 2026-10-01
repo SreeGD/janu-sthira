@@ -2,7 +2,9 @@ import { useEffect } from 'react'
 import { HashRouter, NavLink, Route, Routes } from 'react-router-dom'
 import { disclaimer } from './content/safety'
 import { SettingsProvider, useSettings } from './hooks/useSettings'
+import Bend from './pages/Bend'
 import Cards, { CardDetail } from './pages/Cards'
+import Donts from './pages/Donts'
 import Food from './pages/Food'
 import More from './pages/More'
 import { Checkpoints, Living, Mri } from './pages/Mri'
@@ -43,6 +45,8 @@ function Shell() {
       <Routes>
         <Route path="/" element={<Today />} />
         <Route path="/cards" element={<Cards />} />
+        <Route path="/donts" element={<Donts />} />
+        <Route path="/bend" element={<Bend />} />
         <Route path="/cards/:code" element={<CardDetail />} />
         <Route path="/progress" element={<Progress />} />
         <Route path="/review" element={<Review />} />

@@ -10,6 +10,7 @@ describe('content integrity', () => {
       ...[1, 2, 3, 4, 5].map((n) => `L${n}`),
       ...Array.from({ length: 11 }, (_, i) => `E${i + 1}`),
       ...Array.from({ length: 8 }, (_, i) => `B${i + 1}`),
+      'K1', 'K2', 'K3',
     ]
     expect(cards.map((c) => c.code).sort()).toEqual(expected.sort())
   })

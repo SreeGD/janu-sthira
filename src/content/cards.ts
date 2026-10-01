@@ -414,6 +414,46 @@ export const cards: ExerciseCard[] = [
     kneeSafety: 'feet stay planted and the knees stay still. If the knee feels a twist, use a wider stance or a lighter band.',
     easier: 'lighter band or stand closer.', harder: 'hold 5 seconds; stand with feet closer together.',
   },
+  // ---------- Getting the bend back ----------
+  {
+    code: 'K1', name: 'Seated Knee Bend (Foot Slide Back)', group: 'K', category: 'Bend the knee',
+    howMuch: '10 reps, 2-3 times a day. Gentle, never forced.',
+    steps: [
+      'Sit tall on a sturdy chair with both feet flat on the floor.',
+      'Slide the foot of the injured leg back under the chair as far as is comfortable. Let the knee bend.',
+      'Hold for 10 seconds, breathing out slowly.',
+      'Slide the foot forward again to the start. Repeat.',
+    ],
+    feel: 'A stretch at the front of the knee, and sometimes a fullness behind it.',
+    easier: 'slide back less far, or put a sock on the foot so it glides.',
+    harder: 'once the foot reaches the chair leg, gently lean the body forward to add a little more bend.',
+    stopIf: 'the knee catches, locks or has sharp pain, or it is more swollen afterwards. Do less next time.',
+  },
+  {
+    code: 'K2', name: 'Face-Down Strap Bend', group: 'K', category: 'Bend the knee',
+    howMuch: 'Hold 10-20 seconds, 5 reps, once or twice a day.',
+    steps: [
+      'Lie face down with your forehead on your hands. A cushion under the hips is fine.',
+      'Loop a strap around the ankle of the injured leg. Hold the ends in your hands.',
+      'Bend the knee, bringing the heel toward your buttock as far as comfortable.',
+      'Use the strap to add a very gentle extra pull. Hold 10-20 seconds, then let go slowly.',
+    ],
+    feel: 'A stretch in the front of the thigh and knee.',
+    kneeSafety: 'pull gently. Forcing a swollen knee into a deep bend makes the swelling worse, which then reduces the bend further. Skip this on a swollen day.',
+    easier: 'no strap: just let the heel come up on its own.',
+    stopIf: 'sharp pain, catching, or the knee is more swollen afterwards.',
+  },
+  {
+    code: 'K3', name: 'Sitting on the Floor Safely', group: 'K', category: 'Daily habits',
+    steps: [
+      'Sit on a firm cushion or a low stool, 10-15 cm high. Raising the hips reduces how far the knee has to bend.',
+      'Keep the injured leg straight out in front, or loosely bent out to the side. Do not tuck it under you or cross your legs.',
+      'To get down, hold a wall, a chair or a helper. Lower yourself slowly, taking the weight on the good leg.',
+      'To get up, push up through the good leg and your hands. Never twist on the injured knee.',
+    ],
+    kneeSafety: 'avoid cross-legged sitting, lotus pose and sitting on your heels (vajrasana) for now. They need a very deep bend plus a twist, which a knee without an ACL handles worst.',
+    easier: 'sit on a chair instead of the floor for meals and prayers.',
+  },
 ]
 
 export const cardByCode = new Map(cards.map((c) => [c.code, c]))

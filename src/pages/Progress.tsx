@@ -74,6 +74,7 @@ export default function Progress() {
 
       <Section title="Trends (14 days)">
         <Spark label="Walk minutes" max={60} values={last14.map((d) => days[d]?.log.walkMin)} />
+        <Spark label="Heel to buttock (cm, lower = more bend)" max={60} values={last14.map((d) => days[d]?.log.heelToButtockCm)} />
         <Spark label="Swelling (0–3)" max={3} values={last14.map((d) => days[d]?.log.swelling)} />
         <Spark label="Pain (0–10)" max={10} values={last14.map((d) => days[d]?.log.pain)} />
       </Section>

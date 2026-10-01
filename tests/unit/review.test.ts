@@ -47,6 +47,22 @@ describe('weekStats', () => {
   })
 })
 
+describe('bend tracking', () => {
+  const d = (date: string, cm: number): DayEntry => day(date, { log: { givingWay: [], heelToButtockCm: cm } })
+  it('reports latest measurement and change vs last week', () => {
+    const days = { '2026-09-30': d('2026-09-30', 28), '2026-10-07': d('2026-10-07', 22), '2026-10-09': d('2026-10-09', 20) }
+    const s = weekStats(days, WK)
+    expect(s.bendCm).toBe(20)
+    expect(s.bendChangeCm).toBe(-8)
+  })
+  it('flags no improvement, and no change without a previous week', () => {
+    const stuck = weekStats({ '2026-09-30': d('2026-09-30', 20), '2026-10-07': d('2026-10-07', 21) }, WK)
+    const r = suggestNextWeek(stuck, { ...defaultSettings(), walkTarget: 25 })
+    expect(r.items.some((i) => /not shrunk/.test(i.text))).toBe(true)
+    expect(weekStats({ '2026-10-07': d('2026-10-07', 21) }, WK).bendChangeCm).toBeUndefined()
+  })
+})
+
 describe('suggestNextWeek', () => {
   const settings = { ...defaultSettings(), walkTarget: 25, dopplerDone: true }
   it('calm strong week raises target by 5', () => {
