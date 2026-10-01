@@ -1,4 +1,4 @@
-# Specification Quality Checklist: Jaanu Setu – ACL Rehab Tracker
+# Specification Quality Checklist: Jānu Setu – ACL Rehab Tracker
 
 **Purpose**: Validate specification completeness and quality before proceeding to planning
 **Created**: 2026-10-01

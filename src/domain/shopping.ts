@@ -13,7 +13,7 @@ export function defaultShoppingWeek(weekStartThisWeek: string, weekdayIdx: numbe
 export function shoppingText(weekStart: string, checked: string[], onlyRemaining = true): string {
   const done = new Set(checked)
   const label = parseDate(weekStart).toLocaleDateString('en-GB', { day: 'numeric', month: 'short' })
-  const lines: string[] = [`Weekly shopping list: week of ${label} (Jaanu Setu)`, 'Vegetarian, no onion, garlic or root vegetables.', '']
+  const lines: string[] = [`Weekly shopping list: week of ${label} (Jānu Setu)`, 'Vegetarian, no onion, garlic or root vegetables.', '']
   let count = 0
   for (const c of shoppingList) {
     const items = c.items.filter((i) => !onlyRemaining || !done.has(i.id))

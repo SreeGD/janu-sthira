@@ -1,9 +1,9 @@
 ---
 
-description: "Task list for Jaanu Setu – ACL Rehab Tracker"
+description: "Task list for Jānu Setu – ACL Rehab Tracker"
 ---
 
-# Tasks: Jaanu Setu – ACL Rehab Tracker
+# Tasks: Jānu Setu – ACL Rehab Tracker
 
 **Input**: Design documents from `/specs/001-rehab-tracker/`
 
@@ -23,7 +23,7 @@ description: "Task list for Jaanu Setu – ACL Rehab Tracker"
 - [X] T001 Scaffold Vite + React + TypeScript project in repo root (`package.json`, `index.html`, `vite.config.ts`, `tsconfig.json`, `src/main.tsx`)
 - [X] T002 Install and configure Tailwind CSS with CSS-variable light/dark theme in `tailwind.config.ts` and `src/styles/index.css`
 - [X] T003 [P] Configure Vitest + React Testing Library + jsdom in `vite.config.ts` and `tests/setup.ts`
-- [X] T004 [P] Configure vite-plugin-pwa (Workbox precache, manifest "Jaanu Setu", icons) in `vite.config.ts` and `public/icons/`
+- [X] T004 [P] Configure vite-plugin-pwa (Workbox precache, manifest "Jānu Setu", icons) in `vite.config.ts` and `public/icons/`
 - [X] T005 [P] Add ESLint + Prettier configs and `npm run lint`, `npm test`, `npm run build` scripts in `package.json`
 - [X] T006 [P] Add React Router and app shell with bottom nav (Today, Cards, Progress, Food, More) in `src/App.tsx`
 

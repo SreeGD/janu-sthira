@@ -1,4 +1,4 @@
-# Feature Specification: Jaanu Setu – ACL Rehab Tracker
+# Feature Specification: Jānu Setu – ACL Rehab Tracker
 
 **Feature Directory**: `specs/001-rehab-tracker`
 
@@ -6,9 +6,9 @@
 
 **Status**: Draft
 
-**Input**: User description: "Jaanu Setu: a mobile-first website tracker for a rehab-first ACL recovery programme, similar in spirit to a daily sadhana tracker, based on the ACL Rehab Programme Daily Schedule PDF."
+**Input**: User description: "Jānu Setu: a mobile-first website tracker for a rehab-first ACL recovery programme, similar in spirit to a daily sadhana tracker, based on the ACL Rehab Programme Daily Schedule PDF."
 
-*Jaanu = knee, Setu = bridge: a bridge from a torn ACL back to a confident knee.*
+*Jānu (जानु) = knee, Setu = bridge: a bridge from a torn ACL back to a confident knee.*
 
 ## User Scenarios & Testing *(mandatory)*
 

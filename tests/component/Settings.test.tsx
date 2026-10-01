@@ -9,7 +9,7 @@ const ui = () => render(<SettingsProvider><MemoryRouter><Settings /></MemoryRout
 beforeEach(async () => { await clearAll() })
 
 const backup = (date: string, ticked: string[]) => JSON.stringify({
-  app: 'jaanu-setu', version: 1, exportedAt: '2026-10-20T00:00:00Z',
+  app: 'janu-setu', version: 1, exportedAt: '2026-10-20T00:00:00Z',
   settings: { startDate: '2026-10-01', walkTarget: 25, walkMin: 15, walkMax: 40, theme: 'system', dopplerDone: false, checkpointNotes: {} },
   days: { [date]: { ...emptyDay(date), ticked, updatedAt: '2026-10-20T00:00:00Z' } },
 })

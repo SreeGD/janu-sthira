@@ -5,6 +5,7 @@ let store: ReturnType<typeof createStore> | undefined
 let broken = false
 
 function getStore() {
+  // Legacy database name kept on purpose so data saved under the old app name is not lost.
   if (!store) store = createStore('jaanu-setu', 'kv')
   return store
 }

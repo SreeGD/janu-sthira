@@ -33,9 +33,9 @@ function Shell() {
     <>
       <header className="sticky top-0 z-20 border-b" style={{ background: 'var(--surface)', borderColor: 'var(--border)', paddingTop: 'env(safe-area-inset-top)' }}>
         <div className="mx-auto flex max-w-2xl items-center justify-between px-4 py-2">
-          <NavLink to="/" className="flex items-center gap-2 font-bold" style={{ color: 'var(--navy)' }} aria-label="Jaanu Setu, home">
+          <NavLink to="/" className="flex items-center gap-2 font-bold" style={{ color: 'var(--navy)' }} aria-label="Jānu Setu, home">
             <img src="./icons/icon.svg" alt="" width={28} height={28} className="rounded-md" />
-            Jaanu Setu
+            Jānu Setu
           </NavLink>
           <NavLink to="/safety" className="flex items-center rounded-full px-4 text-sm font-bold text-white" style={{ background: 'var(--bad-solid)' }} aria-label="Safety: when to get help">
             Safety

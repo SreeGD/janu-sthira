@@ -3,7 +3,7 @@ import { kvSet } from './db'
 import { clearAll, getSettings, listDays, listWeekReviews, saveSettings } from './repository'
 
 export interface BackupFile {
-  app: 'jaanu-setu'
+  app: 'janu-setu'
   version: 1
   exportedAt: string
   settings: Settings
@@ -17,7 +17,7 @@ export async function exportBackup(): Promise<BackupFile> {
   const settings = await getSettings()
   const days = await listDays()
   const weeks = await listWeekReviews()
-  const file: BackupFile = { app: 'jaanu-setu', version: 1, exportedAt: new Date().toISOString(), settings: { ...settings, backupLastAt: new Date().toISOString() }, days, weeks }
+  const file: BackupFile = { app: 'janu-setu', version: 1, exportedAt: new Date().toISOString(), settings: { ...settings, backupLastAt: new Date().toISOString() }, days, weeks }
   await saveSettings(file.settings)
   return file
 }
@@ -26,7 +26,7 @@ export async function exportBackup(): Promise<BackupFile> {
 export function validateBackup(data: unknown): BackupFile {
   const d = data as Partial<BackupFile> | null
   if (!d || typeof d !== 'object') throw new Error('Not a backup file.')
-  if (d.app !== 'jaanu-setu') throw new Error('This file is not a Jaanu Setu backup.')
+  if (d.app !== 'janu-setu' && (d.app as unknown) !== 'jaanu-setu') throw new Error('This file is not a Jānu Setu backup.')
   if (typeof d.version !== 'number' || d.version < 1) throw new Error('Unknown backup version.')
   if (typeof d.exportedAt !== 'string') throw new Error('Backup is missing its export date.')
   if (!d.settings || typeof d.settings !== 'object') throw new Error('Backup is missing settings.')
@@ -236,7 +236,7 @@ export async function importMerge(json: string): Promise<ImportSummary> {
 }
 
 export function backupFileName(now = new Date()): string {
-  return `jaanu-setu-backup-${now.toISOString().slice(0, 10)}.json`
+  return `janu-setu-backup-${now.toISOString().slice(0, 10)}.json`
 }
 
 const kvSetDayRaw = (e: DayEntry) => kvSet('day:' + e.date, e)

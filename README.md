@@ -1,6 +1,6 @@
-# Jaanu Setu
+# Jānu Setu
 
-A bridge back to a confident knee: an offline-first, mobile-first tracker for a rehab-first ACL recovery programme, built from the *ACL Rehab Programme Daily Schedule* booklet.
+**Jānu Setu** (Sanskrit *jānu*, knee + *setu*, bridge) is a free, offline-first web app for following a structured, rehab-first recovery plan after an ACL injury. It turns a rehab booklet into a daily habit tracker: a schedule of exercise sessions, an illustrated card for every exercise, a morning knee check that adapts the day and the walking target, a weekly tick sheet, daily and weekly reviews, and guides for the MRI, safety warnings, getting the knee bend back, things to avoid, a vegetarian food plan with a weekly shopping list, and supplements. It works on your phone, stores everything on your device, and needs no account.
 
 **Not medical advice.** The exercise, MRI, supplement and food content is general educational material based on a rehab booklet. Agree any plan with your surgeon and physiotherapist.
 
@@ -8,7 +8,7 @@ This repository contains no personal or health data. Everything you enter stays 
 
 ## Try it
 
-Live app: https://sreegd.github.io/jaanu-setu-app/ (open once online; then it works offline and can be added to your home screen).
+Live app: https://sreegd.github.io/janu-setu/ (open once online; then it works offline and can be added to your home screen).
 
 ## Run
 
@@ -42,6 +42,6 @@ Everything is stored in your browser (IndexedDB). Nothing is sent anywhere. If y
 
 Copyright (C) 2026 SreeGD
 
-Jaanu Setu is free software: you can use, study, share and improve it under the terms of the
+Jānu Setu is free software: you can use, study, share and improve it under the terms of the
 [GNU General Public License v3.0 or later](LICENSE). If you distribute a modified version, you must
 release it under the same licence with its source. It comes with no warranty, and is not a medical device.

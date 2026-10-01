@@ -1,4 +1,4 @@
-# Implementation Plan: Jaanu Setu – ACL Rehab Tracker
+# Implementation Plan: Jānu Setu – ACL Rehab Tracker
 
 **Branch**: `001-rehab-tracker` | **Date**: 2026-10-01 | **Spec**: [spec.md](spec.md)
 
